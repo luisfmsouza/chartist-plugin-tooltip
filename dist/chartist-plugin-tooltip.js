@@ -163,6 +163,16 @@
               anchorY = parseInt(event.target.y2.baseVal.value);
             }
 
+            // Prevent tooltip to appear outside of the chart right side
+            if (left > box.width - $toolTip.offsetHeight) {
+              left  = box.width - $toolTip.offsetHeight;
+            }
+
+            // Prevent tooltip to appear outside of the chart left side
+            if ((left + offsetX) < 0) {
+              offsetX = - left;
+            }
+
             $toolTip.style.top = (anchorY || top) + offsetY + 'px';
             $toolTip.style.left = (anchorX || left) + offsetX + 'px';
           } else {
