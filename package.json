@@ -1,5 +1,5 @@
 {
-  "name": "chartist-plugin-tooltips",
+  "name": "chartist-plugin-tooltip",
   "description": "Point Labels Plugin for Chartist.js",
   "version": "0.0.17",
   "author": "Markus Padourek",
